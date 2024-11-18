@@ -50,8 +50,10 @@
             border-radius: 50%;
             pointer-events: none; /* Prevent interference with mouse events */
             background: radial-gradient(circle, rgba(1, 4, 136, 0.8) 30%, rgba(1, 4, 136, 0) 70%);
-            filter: blur(40px); /* Smooth glowing effect */
+            filter: blur(45px); /* Smooth glowing effect */
             transform: translate(-50%, -50%);
+            opacity: 0; /* Initially invisible */
+            transition: opacity 0.2s ease-in-out; /* Smooth fade-in */
             z-index: 9999; /* Make sure it's above all elements */
         }
     </style>
@@ -70,6 +72,16 @@
         document.addEventListener('mousemove', (e) => {
             cursorGlow.style.left = `${e.pageX}px`;
             cursorGlow.style.top = `${e.pageY}px`;
+            cursorGlow.style.opacity = 1; // Make the glow visible when mouse moves
+        });
+
+        // Optional: Fade out glow after mouse stops moving
+        let timeout;
+        document.addEventListener('mousemove', () => {
+            clearTimeout(timeout);
+            timeout = setTimeout(() => {
+                cursorGlow.style.opacity = 0; // Hide glow after inactivity
+            }, 3000); // 3 seconds of inactivity
         });
     </script>
 </body>
