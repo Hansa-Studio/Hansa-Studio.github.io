@@ -3,154 +3,46 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Coming Soon</title>
+    <title>Hansa Studio</title>
     <style>
         body {
             margin: 0;
-            font-family: Arial, sans-serif;
-            overflow: hidden;
-        }
-
-        .container {
-            position: relative;
-            width: 100%;
-            height: 100vh;
             display: flex;
-            align-items: center;
             justify-content: center;
-            background-color: black;
+            align-items: center;
+            flex-direction: column;
+            height: 100vh;
+            background-color: #000; /* Black background */
+            font-family: Arial, sans-serif;
+            color: #fff;
         }
 
-        svg {
-            width: 100%;
-            height: auto;
-            max-width: 100%;
-            max-height: 100%;
+        h1 {
+            font-size: 3rem;
+            margin: 0;
+            position: relative;
+            color: #fff; /* White color for Hansa Studio */
         }
 
-        @media (max-width: 768px) {
-            svg {
-                height: auto;
-            }
+        h1 sup {
+            font-size: 0.7rem;
+            vertical-align: super;
         }
-        
-        @media (max-width: 480px) {
-            .container {
-                justify-content: flex-start;
-                padding: 20px;
-            }
 
-            svg {
-                width: 100%;
-                height: auto;
-            }
+        .coming-soon {
+            margin-top: 20px;
+            font-size: 2rem;
+            background: linear-gradient(90deg, #FFFFFF, #00562A);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-align: center;
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <div class="container--0-">
-        <div class="text-0-1-0">coming soon</div>
-        <div class="container-0-1-1">
-        <div class="text-1-2-0">hansa studio</div>
-        <div class="text-1-2-1">TM</div>
-        </div>
-        <svg
-            width="1920"
-            height="1024"
-            viewBox="0 0 1920 1024"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-        >
-            <g clip-path="url(#clip0_33_3236)">
-                <rect width="1920" height="1024" fill="black"></rect>
-                <g filter="url(#filter0_f_33_3236)">
-                    <circle cx="-112" cy="-193" r="437" fill="#000DF4"></circle>
-                </g>
-                <g filter="url(#filter1_f_33_3236)">
-                    <ellipse
-                        cx="897.252"
-                        cy="489.549"
-                        rx="94.4763"
-                        ry="363.354"
-                        transform="rotate(77.2137 897.252 489.549)"
-                        fill="#000DFF"
-                    ></ellipse>
-                </g>
-                <g filter="url(#filter2_f_33_3236)">
-                    <circle cx="1822" cy="1244" r="437" fill="#000DF4"></circle>
-                </g>
-            </g>
-            <defs>
-                <filter
-                    id="filter0_f_33_3236"
-                    x="-1249"
-                    y="-1330"
-                    width="2274"
-                    height="2274"
-                    filterUnits="userSpaceOnUse"
-                    color-interpolation-filters="sRGB"
-                >
-                    <feFlood flood-opacity="0" result="BackgroundImageFix"></feFlood>
-                    <feBlend
-                        mode="normal"
-                        in="SourceGraphic"
-                        in2="BackgroundImageFix"
-                        result="shape"
-                    ></feBlend>
-                    <feGaussianBlur
-                        stdDeviation="350"
-                        result="effect1_foregroundBlur_33_3236"
-                    ></feGaussianBlur>
-                </filter>
-                <filter
-                    id="filter1_f_33_3236"
-                    x="-57.7183"
-                    y="-232.744"
-                    width="1909.94"
-                    height="1444.59"
-                    filterUnits="userSpaceOnUse"
-                    color-interpolation-filters="sRGB"
-                >
-                    <feFlood flood-opacity="0" result="BackgroundImageFix"></feFlood>
-                    <feBlend
-                        mode="normal"
-                        in="SourceGraphic"
-                        in2="BackgroundImageFix"
-                        result="shape"
-                    ></feBlend>
-                    <feGaussianBlur
-                        stdDeviation="300"
-                        result="effect1_foregroundBlur_33_3236"
-                    ></feGaussianBlur>
-                </filter>
-                <filter
-                    id="filter2_f_33_3236"
-                    x="485"
-                    y="-93"
-                    width="2674"
-                    height="2674"
-                    filterUnits="userSpaceOnUse"
-                    color-interpolation-filters="sRGB"
-                >
-                    <feFlood flood-opacity="0" result="BackgroundImageFix"></feFlood>
-                    <feBlend
-                        mode="normal"
-                        in="SourceGraphic"
-                        in2="BackgroundImageFix"
-                        result="shape"
-                    ></feBlend>
-                    <feGaussianBlur
-                        stdDeviation="450"
-                        result="effect1_foregroundBlur_33_3236"
-                    ></feGaussianBlur>
-                </filter>
-                <clipPath id="clip0_33_3236">
-                    <rect width="1920" height="1024" fill="white"></rect>
-                </clipPath>
-            </defs>
-        </svg>
-    </div>
-</div>
+    <h1>
+        Hansa Studio<sup>TM</sup>
+    </h1>
+    <div class="coming-soon">Coming Soon</div>
 </body>
 </html>
