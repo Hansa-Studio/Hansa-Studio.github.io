@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hansa Studio</title>
     <style>
+        /* General Styling */
         body {
             margin: 0;
             display: flex;
@@ -15,8 +16,10 @@
             background-color: #000; /* Black background */
             font-family: Arial, sans-serif;
             color: #fff;
+            overflow: hidden; /* Prevent scrollbars */
         }
 
+        /* Title Styling */
         h1 {
             font-size: calc(4vw + 2.5rem);
             margin: 0;
@@ -29,6 +32,7 @@
             vertical-align: super;
         }
 
+        /* Coming Soon Styling */
         .coming-soon {
             margin-top: 20px;
             font-size: calc(3vw + 1.5rem);
@@ -38,16 +42,17 @@
             text-align: center;
         }
 
+        /* Glowing Cursor Styling */
         .cursor-glow {
             position: absolute;
-            width: 50px; /* Diameter of the glow */
-            height: 50px;
+            width: 200px; /* Diameter of the glow */
+            height: 200px;
             border-radius: 50%;
             pointer-events: none; /* Prevent interference with mouse events */
-            background: radial-gradient(circle, #010488 30%, rgba(1, 4, 136, 0) 70%);
-            filter: blur(10px); /* Create the glowing effect */
+            background: radial-gradient(circle, rgba(1, 4, 136, 0.8) 30%, rgba(1, 4, 136, 0) 70%);
+            filter: blur(40px); /* Smooth glowing effect */
             transform: translate(-50%, -50%);
-            z-index: 1000;
+            z-index: 9999; /* Make sure it's above all elements */
         }
     </style>
 </head>
@@ -56,6 +61,8 @@
         hansa studio<sup>TM</sup>
     </h1>
     <div class="coming-soon">coming soon</div>
+    <div class="cursor-glow"></div>
+
     <script>
         const cursorGlow = document.querySelector('.cursor-glow');
 
@@ -63,16 +70,6 @@
         document.addEventListener('mousemove', (e) => {
             cursorGlow.style.left = `${e.pageX}px`;
             cursorGlow.style.top = `${e.pageY}px`;
-        });
-
-        // Optional: Add a slight delay for smooth effect
-        let timeout;
-        document.addEventListener('mousemove', () => {
-            clearTimeout(timeout);
-            cursorGlow.style.opacity = 1; // Ensure the glow is visible
-            timeout = setTimeout(() => {
-                cursorGlow.style.opacity = 0; // Hide glow after mouse stops moving
-            }, 300);
         });
     </script>
 </body>
