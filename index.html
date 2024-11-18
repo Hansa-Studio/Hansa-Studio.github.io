@@ -37,6 +37,18 @@
             -webkit-text-fill-color: transparent;
             text-align: center;
         }
+
+        .cursor-glow {
+            position: absolute;
+            width: 50px; /* Diameter of the glow */
+            height: 50px;
+            border-radius: 50%;
+            pointer-events: none; /* Prevent interference with mouse events */
+            background: radial-gradient(circle, #010488 30%, rgba(1, 4, 136, 0) 70%);
+            filter: blur(10px); /* Create the glowing effect */
+            transform: translate(-50%, -50%);
+            z-index: 1000;
+        }
     </style>
 </head>
 <body>
@@ -44,5 +56,24 @@
         hansa studio<sup>TM</sup>
     </h1>
     <div class="coming-soon">coming soon</div>
+    <script>
+        const cursorGlow = document.querySelector('.cursor-glow');
+
+        // Track mouse movements and update glow position
+        document.addEventListener('mousemove', (e) => {
+            cursorGlow.style.left = `${e.pageX}px`;
+            cursorGlow.style.top = `${e.pageY}px`;
+        });
+
+        // Optional: Add a slight delay for smooth effect
+        let timeout;
+        document.addEventListener('mousemove', () => {
+            clearTimeout(timeout);
+            cursorGlow.style.opacity = 1; // Ensure the glow is visible
+            timeout = setTimeout(() => {
+                cursorGlow.style.opacity = 0; // Hide glow after mouse stops moving
+            }, 300);
+        });
+    </script>
 </body>
 </html>
