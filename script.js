@@ -1,19 +1,25 @@
-const cursorGlow = document.querySelector(".cursor-glow"); // Track mouse movements and update glow position
-
-document.addEventListener("mousemove", (e) => {
-  cursorGlow.style.left = `${e.pageX}px`;
-
-  cursorGlow.style.top = `${e.pageY}px`;
-
-  cursorGlow.style.opacity = 1; // Make the glow visible when mouse moves
-}); // Optional: Fade out glow after mouse stops moving
+// Create the glowing cursor element
+const glow = document.createElement('div');
+glow.className = 'cursor-glow';
+document.body.appendChild(glow);
 
 let timeout;
 
-document.addEventListener("mousemove", () => {
   clearTimeout(timeout);
 
+// Update the position of the glow on mouse move
+document.addEventListener('mousemove', (e) => {
+  glow.style.left = `${e.pageX}px`;
+  glow.style.top = `${e.pageY}px`;
+  glow.style.opacity = 1; // Fade in when the cursor moves
+
+  
   timeout = setTimeout(() => {
-    cursorGlow.style.opacity = 0; // Hide glow after inactivity
-  }, 3000); // 3 seconds of inactivity
+    glow.style.opacity = 0; // Hide glow after inactivity
+  }, 1000); // 1 seconds of inactivity
+});
+
+// Handle fade-out when the mouse leaves the window
+document.addEventListener('mouseout', () => {
+  glow.style.opacity = 0; // Fade out smoothly
 });
