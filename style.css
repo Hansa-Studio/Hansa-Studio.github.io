@@ -66,3 +66,44 @@ z-index:10;
     transition: opacity 1s ease-in-out; /* Smooth fade-in */
     z-index: 0; /* Make sure it's above all elements */
   }
+
+@media (max-width: 768px) {
+    h1 {
+        font-size: calc(8vw + 1.5rem); /* Slightly smaller font size */
+    }
+
+    h1 sup {
+        font-size: calc(1vw + 0.3rem); /* Adjust superscript size */
+    }
+
+    .coming-soon {
+        font-size: calc(14vw + 1.5rem); /* Smaller text size for Coming Soon */
+    }
+
+    .cursor-glow {
+        width: 400px; /* Reduce glow size */
+        height: 400px;
+        filter: blur(35px); /* Adjust glow effect */
+    }
+}
+
+/* For very small screens (portrait phones) */
+@media (max-width: 480px) {
+    h1 {
+        font-size: calc(10vw + 1rem); /* Further reduce font size */
+    }
+
+    h1 sup {
+        font-size: calc(1vw + 0.2rem); /* Superscript size matches smaller font */
+    }
+
+    .coming-soon {
+        font-size: calc(18vw + 1rem); /* Adjust Coming Soon size */
+    }
+
+    .cursor-glow {
+        width: 300px; /* Further reduce glow size */
+        height: 300px;
+        filter: blur(25px); /* Adjust glow effect for small screens */
+    }
+}
