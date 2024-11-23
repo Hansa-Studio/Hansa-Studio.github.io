@@ -25,13 +25,13 @@ body {
     margin: 0;
     position: relative;
     color: #fff; /* White color for Hansa Studio */
-z-index:10;
+    z-index:10;
   }
   
   h1 sup {
     font-size: calc(1vw + 0.5rem);
     vertical-align: super;
-z-index:10;
+    z-index:10;
   }
   
   /* Coming Soon Styling */
@@ -46,8 +46,8 @@ z-index:10;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     text-align: center;
-    white-space: nowrap;
-    word-break: break-word;
+/*  white-space: nowrap;
+    word-break: break-word;*/
     z-index:10;
   }
   
