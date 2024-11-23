@@ -98,7 +98,7 @@ body {
     }
 
     .coming-soon {
-        font-size: calc(9vw + 1rem); /* Adjust Coming Soon size */
+        font-size: calc(7vw + 1rem); /* Adjust Coming Soon size */
     }
 
     .cursor-glow {
