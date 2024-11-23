@@ -67,7 +67,7 @@ body {
     z-index: 0; /* Make sure it's above all elements */
   }
 
-@media (max-width: 768px) {
+/* @media (max-width: 768px) {
     h1 {
         font-size: calc(8vw + 1.5rem); /* Slightly smaller font size */
     }
@@ -107,3 +107,4 @@ body {
         filter: blur(25px); /* Adjust glow effect for small screens */
     }
 }
+ */
